@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "../../assets/newLogo.png";
 import { FcGoogle } from "react-icons/fc";
+import googleLogin from "../../api/loginApi";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate("/Allhabit");
+  const handleLogin = () => {
+    googleLogin();
   };
   return (
     <div className="min-h-screen bg-background gradient-bg flex items-center justify-center px-4">
@@ -33,14 +34,13 @@ const Login = () => {
         {/* Google Login Button */}
         <div className="px-7 pb-8">
           <button
-            onClick={handleNavigate}
+            onClick={handleLogin}
             className="w-full bg-white text-black rounded-xl py-4 font-medium text-lg flex items-center justify-center gap-3 cursor-pointer
            hover:bg-gray-100 active:scale-95 transition-all duration-200 shadow-sm">
             <FcGoogle size={24} />
             Continue with Google
           </button>
         </div>
-        {/* Bottom section */}
         <div className="bg-neutral-900/80 px-10 h-15 py-5 flex items-center justify-between text-sm">
           <div className="flex items-center gap-2"></div>
         </div>

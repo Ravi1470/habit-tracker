@@ -1,5 +1,5 @@
 import { BsFillDropletFill } from "react-icons/bs";
-import HabitCard from "./HabitCard";
+import HabitCard from "../../components/habits/HabitCard";
 import { FaDumbbell } from "react-icons/fa";
 import { FiBookOpen, FiCoffee } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";

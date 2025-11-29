@@ -1,7 +1,8 @@
 import Login from "../pages/auth/Login";
 import { Route, Routes } from "react-router-dom";
-import AllHabitsPage from "../components/habits/AllHabitsPage";
+import AllHabitsPage from "../pages/habits/AllHabitsPage";
 import Dashboard from "../pages/dashboard/Dashboard";
+import HabitForm from "../pages/forms/HabitForm";
 
 Routes;
 const AppRouter = () => {
@@ -14,11 +15,15 @@ const AppRouter = () => {
         />
         <Route
           element={<AllHabitsPage />}
-          path="/Allhabit"
+          path="/"
         />
         <Route
           element={<Dashboard />}
           path="/dashboard"
+        />
+        <Route
+          element={<HabitForm />}
+          path="/add-habit"
         />
       </Routes>
     </div>
